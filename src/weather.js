@@ -5,19 +5,30 @@ export default function weather (){
     return (
         <div className="weather">
             <form>
-                <input type="Search" placeholder="Type a City"/>
-                <input type="submit" value="Search"/>
+                <div className="row">
+                    <div className="col-9">
+                <input type="Search" placeholder="Type a City" className="form-control" autoFocus="on"/>
+                </div>
+                <div className="col-3">
+                <input type="submit" value="Search" className="btn btn-primary"/>
+                </div>
+                </div>
             </form>
             <h1>Johannesburg</h1>
             <ul>
                 <li>Sunday 13:15</li>
                 <li>Partly Cloudy</li>
             </ul>
-            <div className="row">
+            <div className="row mt-3">
                 <div className="col-6">
-                    <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                    <div className="clearfix">
+                    <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" className="float-left"
                     />
-                    6°C|°F
+                    <div className="float-left">
+                    <span className="temperature">6</span>
+                    <span className="unit">°C</span>
+                    </div>
+                </div>
                 </div>
                 <div className="col-6">
                     <ul>
