@@ -21,22 +21,23 @@
 .weather li {
     font-size: 16px;
     font-weight: 100;
+    line-height: 25px;
     list-style: none;
-    line-height: 19px;
 
 }
 
 .weather img {
     height:64px;
     margin-right: 10px;
+    margin-bottom: 27px;
     display: inline-block;
 }
 
 .weather .temperature{
     font-size: bold;
     color:rgb(33, 33, 33);
+    margin-top:27px;
     font-size: 64px;
-    line-height: 64px;
     font-weight: 400px;
 }
 
