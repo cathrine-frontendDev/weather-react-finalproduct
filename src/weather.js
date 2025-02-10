@@ -8,7 +8,7 @@ export default function weather (){
     }
     const apiKey="0eb691o00e3fb24a210b62tf2c42a9e3";
     let city="Johannesburg";
-        let apiUrl="https://api.shecodes.io/weather/v1/current?query={query}&key={key}";
+        let apiUrl=`https://api.shecodes.io/weather/v1/current?query={query}&key={key}`;
         axios.get(apiUrl).then(handleResponse);
     return (
         <div className="weather">
