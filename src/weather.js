@@ -3,19 +3,28 @@ import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./weather.css";
 
-export default function Weather (props){
-    const [weatherData,setWeatherData]=useState({ready:false});
+export default function Weather (){
+    const 
+    [weatherData,setWeatherData]=useState({ready:false});
+
     function handleResponse (response){
         console.log(response.data);
         setWeatherData({
             ready:true,
-            temperature:response.data.main.temp,
-            humidity:response.data.main.humidity,
-            date:new Date (response.date.dt *1000),
-            description:response.data.weather[0].description,
-            iconUrl:"https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+
+            temperature:response.data.temperature.current,
+
+            humidity:response.data.temperature.humidity,
+
+            date:new Date (response.data.time *1000),
+
+            description:response.data.condition.description,
+
+            iconUrl:response.data.condition.iconUrl,
+
             wind:response.data.wind.speed,
-            city:response.data.name
+
+            city:response.data.city
         });
     }
     if (weatherData.ready) {
@@ -59,5 +68,12 @@ export default function Weather (props){
             </div>
             </div>
     );
+} else {
+    const
+    apiKey="0eb691o00e3fb24a210b62tf2c42a9e3";
+    let city="Johannesburg";
+    let
+    apiUrl=`https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
 }
 }
