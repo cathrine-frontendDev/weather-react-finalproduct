@@ -26,14 +26,13 @@ export default function Weather (props){
 
             wind:response.data.wind.speed,
 
-            city:response.data.city
+            city:response.data.city,
         });
     }
 
     function search() {
         const
     apiKey="0eb691o00e3fb24a210b62tf2c42a9e3";
-    let city="Johannesburg";
     let
     apiUrl=`https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse); 
