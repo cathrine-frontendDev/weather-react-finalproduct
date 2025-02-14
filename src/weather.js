@@ -22,7 +22,7 @@ export default function Weather (props){
 
             description:response.data.condition.description,
 
-            icon:response.data.weather.icon,
+            icon:response.data.condition.icon,
 
             wind:response.data.wind.speed,
 
