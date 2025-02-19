@@ -9,7 +9,7 @@ function App() {
         <Weather defaultCity="Johannesburg"/>
       <footer>
         This project was coded by Cathrine Kamasho and is {""}
-        < a href='' target='_blank'>
+        < a href='https://github.com/cathrine-frontendDev/weather-react-finalproduct' target='_blank'>
         open sourced on Github
         </a>
       </footer>
