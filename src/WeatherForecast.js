@@ -34,15 +34,6 @@ export default function WeatherForecast (props){
                     <div className="col">
                    <WeatherForecastDay data={forecast[4]} />
                     </div> 
-                    <div className="col">
-                   <WeatherForecastDay data={forecast[5]} />
-                    </div> 
-                    <div className="col">
-                   <WeatherForecastDay data={forecast[6]} />
-                    </div> 
-                    <div className="col">
-                   <WeatherForecastDay data={forecast[7]} />
-                    </div> 
               </div>
           </div>
             );
