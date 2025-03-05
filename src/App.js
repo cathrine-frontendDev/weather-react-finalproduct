@@ -13,7 +13,7 @@ function App() {
         open sourced on Github {""}
         </a>
         and is {""}
-        <a href="">
+        <a href="https://uptodate-app.netlify.app/">
         hosted on Netlify.
         </a>
       </footer>
